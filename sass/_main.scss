@@ -1,0 +1,62 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+
+    @include breakpointDown (mobile) {
+        width: 94%;
+        margin: rem(30) auto;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+
+        @include breakpointDown (mobile) {
+            grid-template-columns: 1fr;
+        }
+
+        .bg__img {
+            background: url('../images/image-product-desktop.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            border-radius: 15px 0 0 15px;
+            height: 100%;
+            margin-right: rem(30);
+
+            @include breakpointDown (mobile) {
+                background: url('../images/image-product-mobile.jpg');
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 17.188rem;
+                border-radius: 15px 15px 0 0;
+            }
+        }
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: rem(22);
+        padding-bottom: rem(32);
+        transform: translateY(-22px);
+
+        h1 {
+            padding: 0;
+            transform: translateY(0);
+
+        }
+    }
+}
